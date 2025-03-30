@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astropedia</title>
+    <style>
+body {
+    background: linear-gradient(to bottom, #000428, #004e92);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: white;
+    overflow-x: hidden;
+}
+
+.container {
+    padding: 40px;
+    height: auto;
+    width: 400px;
+    background: linear-gradient(to bottom, #f8f8f870, #000000ac);
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+
+h1 {
+    color: rgb(215, 53, 53);
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #ffffff;
+}
+
+input {
+    background:  #ffffffdb;
+    height: 40px;
+    width: 350px;
+    border-radius: 20px;
+    padding: 0px 20px;
+    border: none;
+    margin-bottom: 20px;
+    color: rgb(10, 2, 2);
+}
+
+button {
+    background: rgb(43, 73, 172);
+    height: 40px;
+    width: 390px;
+    border-radius: 40px;
+    border: none;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    color: white;
+}
+
+button:hover {
+    background-color:rgb(15, 36, 107);
+}
+.stars {
+      position: absolute;
+      width: 2px;
+      height: 2px;
+      background: white;
+      border-radius: 50%;
+      animation: twinkle 3s infinite alternate;
+}
+    </style>
+</head>
+<body>
+    <div class="planet"></div>
+    <div class="container">
+        <h1>Create New Account</h1>
+        <form action="page4.html" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm-password" required> <br><br>
+
+            <button type="submit">Create Account</button>
+        </form>
+    </div>
+</body>
+<script>
+    for (let i = 0; i < 100; i++) {
+      const star = document.createElement('div');
+      star.className = 'stars';
+      star.style.left = Math.random() * window.innerWidth + 'px';
+      star.style.top = Math.random() * window.innerHeight + 'px';
+      star.style.animationDuration = Math.random() * 3 + 2 + 's';
+      document.body.appendChild(star);
+    }
+  </script>
+</html>

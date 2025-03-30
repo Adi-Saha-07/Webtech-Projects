@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #3470a45c, #3470a4a0);
+    color: #333;
+}
+
+header {
+    background-color: #236084;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    height: 80px;
+}
+
+nav {
+    background-color: #608ba3;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    float: left;
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 20px;
+}
+
+nav a:hover {
+    background-color: #e6663f;
+    color: white;
+}
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+    background: #ffffff;
+    padding: 15px;
+    background: linear-gradient(to bottom, #d1e3eb8d, #cbdefa8e);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #35424a;
+    color: #ffffff;
+}
+h2 {
+    color:red;
+}
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.gallery img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+}
+.navbar {
+    background-color: #6f6f6f;
+    display: flex;
+    justify-content: center;
+}
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.navbar ul li {
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 14px 20px;
+}
+.navbar a:hover{
+    background-color: #444;
+}
+.star-type {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-left: 4px solid #ff0000;
+    background: linear-gradient(to bottom, #d1e3eb8d, #cbdefa8e);
+}
