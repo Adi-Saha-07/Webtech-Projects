@@ -1,0 +1,133 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background:rgb(27, 26, 26);
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #0e1f33cd ,#1a2f47);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    .p1 {
+      font-size:70%;
+      color: #e5e5e5;
+    }
+    .p2{
+      font-size:100%;
+      color:rgba(243, 78, 78, 0.941);
+    }
+    
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    nav {
+      background:#0e1f33cd;
+      box-shadow: 4px 3px rgba(15, 28, 51, 0.388);
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      margin: 0 15px;
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      transform: scale(1.10);
+      transition: transform 0.4s ease-in-out;
+      color: rgba(243, 78, 78, 0.941) ;
+    }
+
+    .a1{
+      text-decoration: none;
+      color: #ffffff;
+    }
+
+    #a2:hover {
+      transform: scale(1.07);
+      transition: transform 0.3s ease-in-out;
+      color: rgba(243, 78, 78, 0.941);
+    }
+
+    .a1:hover{
+      color: rgb(195, 195, 195);
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section h2 {
+      color:#ffffff;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      border-bottom: 2px solid rgba(243, 78, 78, 0.941) ;
+      display: inline-block;
+    }
+
+    .project {
+      color:#e0dddd;
+      border:solid rgb(248, 60, 60) ;
+      background: #151515c7;
+      margin: 15px 0;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 4px  rgb(248, 60, 60) ;
+    }
+
+    .project:hover {
+      transform: scale(1.02);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .s1{
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      display: inline-block;
+      color:rgba(243, 78, 78, 0.941);
+    }
+
+    .p3{
+      color:rgba(243, 78, 78, 0.941) ;
+    }
+    .b10 {
+      color:rgba(243, 78, 78, 0.941) ;
+    }
+    footer {
+      text-align: left;
+      padding: 20px;
+      background: #0e1f33;
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      nav {
+        flex-wrap: wrap;
+      }
+    }
