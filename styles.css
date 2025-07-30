@@ -16,7 +16,7 @@
     }
 
     header {
-      background: linear-gradient(to right, #0e1f33cd ,#1a2f47);
+      background: linear-gradient(to right, #0e1f33 ,#354961);
       color: white;
       padding: 60px 20px;
       text-align: center;
@@ -59,7 +59,7 @@
     }
 
     nav {
-      background:#0e1f33cd;
+      background:#0e1f33e3;
       box-shadow: 4px 3px rgba(15, 28, 51, 0.388);
       display: flex;
       justify-content: center;
@@ -103,7 +103,7 @@
     }
 
     section h2 {
-      color:#ffffff;
+      color: rgba(243, 78, 78, 0.941) ;
       font-size: 1.5rem;
       margin-bottom: 20px;
       border-bottom: 2px solid rgba(243, 78, 78, 0.941) ;
