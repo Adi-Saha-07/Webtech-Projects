@@ -15,8 +15,18 @@
       background-repeat: no-repeat;
     }
 
+    #aiRocketBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+}
+
     header {
-      background: linear-gradient(to right, #0e1f33 ,#354961);
+      background: linear-gradient(to right, #000000 ,#354961);
       color: white;
       padding: 60px 20px;
       text-align: center;
@@ -32,7 +42,7 @@
       height: 150px;
       object-fit: cover;
       border-radius: 50%;
-      border: 4px solid rgba(243, 78, 78, 0.941);
+      border: 5px solid rgb(184, 66, 66);
       margin-bottom: 15px;
     }
 
@@ -59,8 +69,8 @@
     }
 
     nav {
-      background:#0e1f33e3;
-      box-shadow: 4px 3px rgba(15, 28, 51, 0.388);
+      background: linear-gradient(to right, #000000d1 ,#132131d7);
+      box-shadow: 4px 3px rgba(0, 0, 0, 0.388);
       display: flex;
       justify-content: center;
       padding: 20px;
@@ -94,7 +104,7 @@
     }
 
     .a1:hover{
-      color: rgb(195, 195, 195);
+      color: rgb(41, 202, 129);
     }
     section {
       padding: 60px 20px;
@@ -103,21 +113,21 @@
     }
 
     section h2 {
-      color: rgba(243, 78, 78, 0.941) ;
+      color: rgba(233, 233, 233, 0.941) ;
       font-size: 1.5rem;
       margin-bottom: 20px;
-      border-bottom: 2px solid rgba(243, 78, 78, 0.941) ;
+      border-bottom: 2px solid rgba(233, 233, 233, 0.941) ;
       display: inline-block;
     }
 
     .project {
-      color:#e0dddd;
-      border:solid rgb(248, 60, 60) ;
-      background: #151515c7;
+      color:#ffffff;
+      border:solid rgba(248, 60, 60, 0.536) ;
+      background: #212121c9;
       margin: 15px 0;
       padding: 15px;
       border-radius: 10px;
-      box-shadow: 0 0 4px  rgb(248, 60, 60) ;
+      box-shadow: 0 0 4px  rgba(248, 60, 60, 0.562) ;
     }
 
     .project:hover {
@@ -141,7 +151,7 @@
     footer {
       text-align: left;
       padding: 20px;
-      background: #0e1f33;
+      background:linear-gradient(to right,#0e2235,#010f1e);
       color: white;
     }
 
@@ -153,3 +163,26 @@
         flex-wrap: wrap;
       }
     }
+
+.download-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: rgba(128, 128, 128, 0.312);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  padding: 10px 25px;
+  border-radius: 12px 0 12px 12px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  box-shadow: 0 4px 6px rgba(94, 94, 94, 0.67);
+  z-index: 999;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #b1b0b091;
+  color: white;
+  transform: scale(1.05);
+}
