@@ -7,6 +7,14 @@
 
     body {
       font-family:'Inter', sans-serif;
+      color: #333;
+      background-image:url('https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?auto=format&fit=crop&w=1920&q=80');
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+      font-family:'Inter', sans-serif;
       background:rgb(27, 26, 26);
       color: #333;
     }
