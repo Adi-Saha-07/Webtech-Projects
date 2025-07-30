@@ -164,25 +164,3 @@
       }
     }
 
-.download-btn {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: rgba(128, 128, 128, 0.312);
-  color: rgb(255, 255, 255);
-  font-weight: bold;
-  padding: 10px 25px;
-  border-radius: 12px 0 12px 12px;
-  font-family: 'Poppins', sans-serif;
-  font-size: 14px;
-  box-shadow: 0 4px 6px rgba(94, 94, 94, 0.67);
-  z-index: 999;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.download-btn:hover {
-  background-color: #b1b0b091;
-  color: white;
-  transform: scale(1.05);
-}
