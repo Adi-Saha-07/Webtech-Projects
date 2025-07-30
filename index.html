@@ -10,15 +10,17 @@
     crossorigin="anonymous"
     referrerpolicy="no-referrer"
   />
-  <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/png" href="wp.png" >
+  <link rel="stylesheet" href="pagecss.css">
+  <link rel="icon" type="image/png" href="c:\Users\adity\Downloads\wp.png" >
   <title>Adittya's Resume</title>
 </head>
 <body>
+<canvas id="aiRocketBg"></canvas>
 
+<!--"url('https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?auto=format&fit=crop&w=1920&q=80')"-->
   <header>
     <div class="profile-container">
-    <img src="wpp.jpg" class="img1">
+    <img src="c:\Users\adity\Downloads\wpp.jpg" class="img1">
     </div>
     <h1>Adittya Saha</h1>
     <p class="p2">BEGINNER SOFTWARE DEVELOPER</p>
@@ -117,9 +119,89 @@ WBBSE <b>( X )</b> 48% WBCHSE <b>( XII )</b> 80% <br>
       <a href="https://www.linkedin.com/in/adittya-saha-1913622ab?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" style="margin-right: 15px; color: white;"><i class="fab fa-linkedin fa-2x" id="a2"></i></a>
       <a href="https://www.facebook.com/profile.php?id=100054588483730&ref=_ig_profile_ac" target="_blank" style="margin-right: 15px; color: white;"><i class="fab fa-facebook fa-2x" id="a2"></i></a>
       <a href="https://github.com/Adi-Saha-07" target="_blank" style="margin-right: 15px; color: white;"><i class="fab fa-github fa-2x" id="a2"></i></a>
+<!-- Place this at the very end of your body tag, inside your footer -->
+<a href="https://drive.google.com/file/d/1Nq6lkRLOuwViqJbn9XetMlqaMbQBEI6p/view?usp=sharing" class="download-btn" target="_blank">Download CV</a>
+
     </div>
   </section>
 </footer>
-
 </body>
+<script>
+  const canvas = document.createElement("canvas");
+  Object.assign(canvas.style, {
+    position: "fixed",
+    top: "0",
+    left: "0",
+    width: "100%",
+    height: "100%",
+    zIndex: "-1",
+    background: "#0b0c10"
+  });
+  document.body.appendChild(canvas);
+
+  const ctx = canvas.getContext("2d");
+  let width, height;
+  function resize() {
+    width = canvas.width = window.innerWidth;
+    height = canvas.height = window.innerHeight;
+  }
+  resize();
+  window.addEventListener("resize", resize);
+
+  let t = 0;
+
+  function drawRetinaHUD() {
+    ctx.clearRect(0, 0, width, height);
+    const cx = width / 2;
+    const cy = height / 2;
+
+    const pulse = 10 + Math.sin(t / 10) * 5;
+    ctx.beginPath();
+    ctx.arc(cx, cy, pulse, 0, Math.PI * 2);
+    ctx.fillStyle = "rgb(21, 56, 75)";
+    ctx.shadowBlur = 30;
+    ctx.shadowColor = "rgb(21, 56, 75)";
+    ctx.fill();
+
+    for (let i = 1; i <= 4; i++) {
+      ctx.beginPath();
+      ctx.arc(cx, cy, 50 * i + Math.sin(t / 20 + i) * 2, 0, Math.PI * 2);
+      ctx.strokeStyle = `rgb(51, 107, 138), ${0.3 + i * 0.1})`;
+      ctx.lineWidth = 1;
+      ctx.setLineDash(i % 2 === 0 ? [3, 10] : []);
+      ctx.stroke();
+    }
+
+    ctx.save();
+    ctx.translate(cx, cy);
+    ctx.rotate(t * 0.01);
+    for (let i = 0; i < 6; i++) {
+      ctx.beginPath();
+      ctx.arc(0, 0, 140, i * Math.PI / 3, i * Math.PI / 3 + 0.2);
+      ctx.strokeStyle = "rgb(21, 56, 75)";
+      ctx.lineWidth = 2;
+      ctx.shadowBlur = 5;
+      ctx.shadowColor = "rgb(21, 56, 75) ";
+      ctx.stroke();
+    }
+    ctx.restore();
+
+    // Spinning dots
+    for (let i = 0; i < 360; i += 30) {
+      const rad = (i + t) * Math.PI / 180;
+      const x = cx + Math.cos(rad) * 90;
+      const y = cy + Math.sin(rad) * 90;
+      ctx.beginPath();
+      ctx.arc(x, y, 2, 0, Math.PI * 2);
+      ctx.fillStyle = "rgb(21, 56, 75) ";
+      ctx.fill();
+    }
+
+    t++;
+    requestAnimationFrame(drawRetinaHUD);
+  }
+
+  drawRetinaHUD();
+</script>
+
 </html>
