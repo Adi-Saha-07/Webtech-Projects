@@ -163,4 +163,20 @@
         flex-wrap: wrap;
       }
     }
+   .more-projects-btn {
+  display: inline-block;
+  background-color: rgba(215, 215, 215, 0.412);
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.816);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.more-projects-btn:hover {
+  transform: scale(1.05);
+  background-color: #3a3a3a93;
+}
 
