@@ -7,7 +7,7 @@
 
     body {
       font-family:'Inter', sans-serif;
-      color: #333;
+      color: #0f0f0f;
       background-image:url('https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?auto=format&fit=crop&w=1920&q=80');
       background-size: cover;
       background-attachment: fixed;
@@ -26,11 +26,36 @@
 }
 
     header {
-      background: linear-gradient(to right, #000000 ,#354961);
-      color: white;
-      padding: 60px 20px;
-      text-align: center;
+  background: linear-gradient(to right, #240742c2 ,#0000009c);
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     }
+
+    .header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.header-text {
+  text-align: center;
+  max-width: 500px;
+}
+
+#profile-img {
+  transition: all 0.5s ease;
+}
+
+.shrinked {
+  width: 90px !important;
+  height: 90px !important;
+}
+
     .profile-container {
       text-align: center;
       margin-top: 40px;
@@ -42,7 +67,7 @@
       height: 150px;
       object-fit: cover;
       border-radius: 50%;
-      border: 5px solid rgb(184, 66, 66);
+      border: 7px solid rgba(137, 90, 156, 0.893);
       margin-bottom: 20px;
     }
 
@@ -60,7 +85,8 @@
     }
     .p2{
       font-size:100%;
-      color:rgba(243, 78, 78, 0.941);
+      color:rgb(195, 168, 195);
+      font-weight: bold;
     }
     
     header p {
@@ -69,7 +95,7 @@
     }
 
     nav {
-      background: linear-gradient(to right, #000000d1 ,#132131d7);
+      background: linear-gradient(to right, #321f458a,#2e1b3e6f ,#0000006f);
       box-shadow: 4px 3px rgba(0, 0, 0, 0.388);
       display: flex;
       justify-content: center;
@@ -77,6 +103,8 @@
       position: sticky;
       top: 0;
       z-index: 1000;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     }
 
     nav a {
@@ -89,7 +117,7 @@
     nav a:hover {
       transform: scale(1.10);
       transition: transform 0.4s ease-in-out;
-      color: rgba(243, 78, 78, 0.941) ;
+      color: rgba(206, 127, 238, 0.893) ;
     }
 
     .a1{
@@ -97,10 +125,14 @@
       color: #ffffff;
     }
 
+    #a2{
+      color: rgb(255, 255, 255);
+    }
+    
     #a2:hover {
       transform: scale(1.07);
       transition: transform 0.3s ease-in-out;
-      color: rgba(243, 78, 78, 0.941);
+      color: rgba(137, 90, 156, 0.893);
     }
 
     .a1:hover{
@@ -121,13 +153,14 @@
     }
 
     .project {
+      
       color:#ffffff;
-      border:solid rgba(248, 60, 60, 0.536) ;
-      background: #212121c9;
+      border:solid rgba(64, 34, 77, 0.893) ;
+      background: #24252d;
       margin: 15px 0;
       padding: 15px;
       border-radius: 10px;
-      box-shadow: 0 0 4px  rgba(248, 60, 60, 0.562) ;
+      box-shadow: 0 0 4px rgba(160, 120, 175, 0.893);
     }
 
     .project:hover {
@@ -139,19 +172,19 @@
       font-size: 1.5rem;
       margin-bottom: 20px;
       display: inline-block;
-      color:rgba(243, 78, 78, 0.941);
+      color:rgba(137, 90, 156, 0.893);
     }
 
     .p3{
-      color:rgba(243, 78, 78, 0.941) ;
+      color:rgba(137, 90, 156, 0.893) ;
     }
     .b10 {
-      color:rgba(243, 78, 78, 0.941) ;
+      color:rgba(137, 90, 156, 0.893) ;
     }
     footer {
       text-align: left;
       padding: 20px;
-      background:linear-gradient(to right,#0e2235,#010f1e);
+      background:linear-gradient(to right,#000000,#0e0e0e);
       color: white;
     }
 
@@ -163,20 +196,34 @@
         flex-wrap: wrap;
       }
     }
-   .more-projects-btn {
+    
+  .more-projects-btn {
   display: inline-block;
-  background-color: rgba(215, 215, 215, 0.412);
-  color: rgb(255, 255, 255);
-  padding: 10px 20px;
+  background: rgba(173, 147, 179, 0.282);
+  color: #ffffff;
+  padding: 12px 24px;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.816);
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.more-projects-btn:hover {
-  transform: scale(1.05);
-  background-color: #3a3a3a93;
+.more-projects-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background: rgba(109, 192, 223, 0.901);
+  transform: translateX(-50%);
+  transition: width 0.4s ease;
 }
 
+.more-projects-btn:hover::before {
+  width: 100%;
+}
