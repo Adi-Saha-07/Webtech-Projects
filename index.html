@@ -18,13 +18,18 @@
 <canvas id="aiRocketBg"></canvas>
 <!--"url('https://images.unsplash.com/photo-1517816743773-6e0fd518b4a6?auto=format&fit=crop&w=1920&q=80')"-->
   <header>
+  <div class="header-flex">
     <div class="profile-container">
-    <img src="wpp.jpg" class="img1">
+      <img src="c:\Users\adity\Downloads\wpp.jpg" class="img1" id="profile-img">
     </div>
-    <h1>ADITTYA SAHA</h1>
-    <p class="p2">BEGINNER SOFTWARE DEVELOPER</p>
-    <p class="p1"><b>| DELHI NCR - UTTAR PREDESH , INDIA |</b></p>
-  </header>
+    <div class="header-text">
+      <h1>ADITTYA SAHA</h1>
+      <p class="p2">BEGINNER SOFTWARE DEVELOPER</p>
+      <p class="p1"><b>| DELHI NCR - UTTAR PREDESH , INDIA |</b></p>
+    </div>
+  </div>
+</header>
+
 
   <nav>
     <a href="#about">About</a>
@@ -127,6 +132,17 @@ WBBSE <b>( X )</b> 48% WBCHSE <b>( XII )</b> 80% <br>
 </footer>
 </body>
 <script>
+  window.addEventListener("scroll", function () {
+    const img = document.getElementById("profile-img");
+    if (window.scrollY > 100) {
+      img.classList.add("shrinked");
+    } else {
+      img.classList.remove("shrinked");
+    }
+  });
+</script>
+
+<script>
   const canvas = document.createElement("canvas");
   Object.assign(canvas.style, {
     position: "fixed",
@@ -135,7 +151,7 @@ WBBSE <b>( X )</b> 48% WBCHSE <b>( XII )</b> 80% <br>
     width: "100%",
     height: "100%",
     zIndex: "-1",
-    background: "#101010"
+    background: "#0d0d1d"
   });
   document.body.appendChild(canvas);
 
@@ -158,9 +174,9 @@ WBBSE <b>( X )</b> 48% WBCHSE <b>( XII )</b> 80% <br>
     const pulse = 10 + Math.sin(t / 10) * 5;
     ctx.beginPath();
     ctx.arc(cx, cy, pulse, 0, Math.PI * 2);
-    ctx.fillStyle = "rgb(21, 56, 75)";
+    ctx.fillStyle = "rgba(137, 90, 156, 0.893)";
     ctx.shadowBlur = 30;
-    ctx.shadowColor = "rgb(21, 56, 75)";
+    ctx.shadowColor = "rgba(137, 90, 156, 0.893)";
     ctx.fill();
 
     for (let i = 1; i <= 4; i++) {
@@ -178,10 +194,10 @@ WBBSE <b>( X )</b> 48% WBCHSE <b>( XII )</b> 80% <br>
     for (let i = 0; i < 6; i++) {
       ctx.beginPath();
       ctx.arc(0, 0, 140, i * Math.PI / 3, i * Math.PI / 3 + 0.2);
-      ctx.strokeStyle = "rgb(21, 56, 75)";
+      ctx.strokeStyle = "rgba(137, 90, 156, 0.893)";
       ctx.lineWidth = 2;
       ctx.shadowBlur = 5;
-      ctx.shadowColor = "rgb(21, 56, 75) ";
+      ctx.shadowColor = "rgba(137, 90, 156, 0.893) ";
       ctx.stroke();
     }
     ctx.restore();
@@ -193,7 +209,7 @@ WBBSE <b>( X )</b> 48% WBCHSE <b>( XII )</b> 80% <br>
       const y = cy + Math.sin(rad) * 90;
       ctx.beginPath();
       ctx.arc(x, y, 2, 0, Math.PI * 2);
-      ctx.fillStyle = "rgb(21, 56, 75) ";
+      ctx.fillStyle = "rgba(137, 90, 156, 0.893) ";
       ctx.fill();
     }
 
@@ -205,5 +221,3 @@ WBBSE <b>( X )</b> 48% WBCHSE <b>( XII )</b> 80% <br>
 </script>
 
 </html>
-
-
