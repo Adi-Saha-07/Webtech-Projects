@@ -30,15 +30,22 @@
   </div>
 </header>
 
+<div class="hamburger" onclick="toggleMenu()">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#language">Language</a>
-    <a href="#contact">Contact</a>
-  </nav>
+
+<nav id="navMenu">
+  <a href="#about">About</a>
+  <a href="#education">Education</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#language">Language</a>
+  <a href="#contact">Contact</a>
+</nav>
+
 
   <section id="about">
     <h2>ABOUT ME</h2>
@@ -122,15 +129,32 @@ WBBSE <b>( X )</b> 48% WBCHSE <b>( XII )</b> 80% <br>
 
       <div style="margin-top: 30px;">
       <p style="font-size: 1.2rem; margin-bottom: 10px;"></p>
-      <a href="https://www.instagram.com/aditya_adi_saha/?__pwa=1" target="_blank" style="margin-right: 15px; color: white;"><i class="fab fa-instagram fa-2x" id="a2"></i></a>
-      <a href="https://www.linkedin.com/in/adittya-saha-1913622ab?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" style="margin-right: 15px; color: white;"><i class="fab fa-linkedin fa-2x" id="a2"></i></a>
-      <a href="https://www.facebook.com/profile.php?id=100054588483730&ref=_ig_profile_ac" target="_blank" style="margin-right: 15px; color: white;"><i class="fab fa-facebook fa-2x" id="a2"></i></a>
-      <a href="https://github.com/Adi-Saha-07" target="_blank" style="margin-right: 15px; color: white;"><i class="fab fa-github fa-2x" id="a2"></i></a>
+      <a href="https://www.instagram.com/aditya_adi_saha/?__pwa=1" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" class="social-logo">
+</a>
+<a href="https://www.linkedin.com/in/adittya-saha-1913622ab" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="social-logo">
+</a>
+<a href="https://www.facebook.com/profile.php?id=100054588483730" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" class="social-logo">
+</a>
+<a href="https://github.com/Adi-Saha-07" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733553.png" alt="GitHub" class="social-logo">
+</a>
 
     </div>
   </section>
 </footer>
 </body>
+<script>
+  function toggleMenu() {
+    const nav = document.getElementById("navMenu");
+    const burger = document.querySelector(".hamburger");
+    nav.classList.toggle("nav-open");
+    burger.classList.toggle("open");
+  }
+</script>
+
 <script>
   window.addEventListener("scroll", function () {
     const img = document.getElementById("profile-img");
@@ -151,7 +175,7 @@ WBBSE <b>( X )</b> 48% WBCHSE <b>( XII )</b> 80% <br>
     width: "100%",
     height: "100%",
     zIndex: "-1",
-    background: "#0d0d1d"
+    background: "#000000ac"
   });
   document.body.appendChild(canvas);
 
@@ -221,4 +245,3 @@ WBBSE <b>( X )</b> 48% WBCHSE <b>( XII )</b> 80% <br>
 </script>
 
 </html>
-
